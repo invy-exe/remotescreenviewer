@@ -15,8 +15,9 @@ def server_upload():
     height = int(img.shape[0] * scale_percent / 100)
     dim = (width, height)
     resized = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
-    #-------Scaling Code Ends Here---------------
-    #Define Img Quality(1 - 100) and Write File ---- Here Quality is 50
+    #Scaling Code Ends Here
+    #Define Img Quality(1 - 100) and Write File
+    #Here Quality is 50
     cv2.imwrite('test.jpg', resized, [cv2.IMWRITE_JPEG_QUALITY, 50])
     session = ftplib.FTP('#ftpHostName','#ftpusername','ftppassword')
     session.cwd('#ftp working directory. Leave empty if dont wanna change')
