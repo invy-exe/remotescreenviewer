@@ -19,8 +19,8 @@ def server_upload():
     #Define Img Quality(1 - 100) and Write File
     #Here Quality is 50
     cv2.imwrite('test.jpg', resized, [cv2.IMWRITE_JPEG_QUALITY, 50])
-    session = ftplib.FTP('#ftpHostName','#ftpusername','ftppassword')
-    session.cwd('#ftp working directory. Leave empty if dont wanna change')
+    session = ftplib.FTP('#ftpHostName','#ftpUserName','ftpPassword')
+    session.cwd('#ftp working directory. Leave empty if you dont wanna change')
     file = open('test.jpg','rb')                 
     session.storbinary('STOR test.jpg', file)     
     file.close()                                   
